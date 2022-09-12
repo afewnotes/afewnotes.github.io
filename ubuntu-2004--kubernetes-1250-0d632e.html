@@ -17,7 +17,7 @@
 <link rel="stylesheet" type="text/css" href="css/notablog.css">
 <!-- Favicon -->
 
-  <link rel="shortcut icon" href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F45d1af81-af75-4f04-b8e7-7865a7a676e6%2F1.png?table=collection&amp;id=9c535b69-155f-4a82-ae38-1a4859ea6968">
+  <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;📔&lt;/text&gt;&lt;/svg&gt;">
 
 <style>
   :root {
@@ -41,7 +41,7 @@
   <a href="index.html">
     <div class="Navbar__Btn">
       
-        <span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F45d1af81-af75-4f04-b8e7-7865a7a676e6%2F1.png?table=collection&amp;id=9c535b69-155f-4a82-ae38-1a4859ea6968"></span>&nbsp;
+        <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;📔&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
       
       <span>Home</span>
     </div>
@@ -59,6 +59,8 @@
     
       <div class="DateTagBar">
         
+          <span class="DateTagBar__Item DateTagBar__Date">Posted on Tue, Sep 13, 2022</span>
+        
         
           <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--gray">
             <a href="tag/kubernates.html">kubernates</a>
@@ -71,7 +73,7 @@
       </div>
     
   </header>
-  <article id="https://www.notion.so/0d632e7cac6244e281851cd90ca5b8ec" class="PageRoot"><h2 id="https://www.notion.so/f5f23c95630a4378bf4730cc9d3d653b" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/f5f23c95630a4378bf4730cc9d3d653b"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">节点准备（所有节点）</span></span></h2><ul class="BulletedListWrapper"><li id="https://www.notion.so/22a0e235b90c41139fcb8771797e4883" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString">固定IP，检查 </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">/etc/netplan/00-installer-config.yaml</code></span></span><pre id="https://www.notion.so/0e60029650d34c99ba2c3b6914796ef0" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token key atrule">network</span><span class="token punctuation">:</span>
+  <article id="https://www.notion.so/0d632e7cac6244e281851cd90ca5b8ec" class="PageRoot"><ul id="https://www.notion.so/6d17a3f5a66e479faa0ab6f3ea3f7d6d" class="ColorfulBlock ColorfulBlock--ColorGray TableOfContents"><li class="TableOfContents__Item"><a href="#https://www.notion.so/0e620a6c92ca4ac3b58d3f3b1dfa9842"><div style="margin-left:0px"><span class="SemanticStringArray"><span class="SemanticString">节点准备（所有节点）</span></span></div></a></li><li class="TableOfContents__Item"><a href="#https://www.notion.so/7ff1b6c6b5f04ca5b59240a461538e7e"><div style="margin-left:0px"><span class="SemanticStringArray"><span class="SemanticString">初始化集群（master 节点）</span></span></div></a></li><li class="TableOfContents__Item"><a href="#https://www.notion.so/225b50052ffc4fe480b66b6b5360f328"><div style="margin-left:0px"><span class="SemanticStringArray"><span class="SemanticString">安装 calico 网络插件</span></span></div></a></li><li class="TableOfContents__Item"><a href="#https://www.notion.so/e1d5f0fd8e714bc3aa13becaca1278b0"><div style="margin-left:0px"><span class="SemanticStringArray"><span class="SemanticString">worker 节点加入</span></span></div></a></li></ul><h2 id="https://www.notion.so/0e620a6c92ca4ac3b58d3f3b1dfa9842" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/0e620a6c92ca4ac3b58d3f3b1dfa9842"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">节点准备（所有节点）</span></span></h2><ul class="BulletedListWrapper"><li id="https://www.notion.so/22a0e235b90c41139fcb8771797e4883" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString">固定IP，检查 </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">/etc/netplan/00-installer-config.yaml</code></span></span><pre id="https://www.notion.so/0e60029650d34c99ba2c3b6914796ef0" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token key atrule">network</span><span class="token punctuation">:</span>
   <span class="token key atrule">ethernets</span><span class="token punctuation">:</span>
     <span class="token key atrule">enp0s3</span><span class="token punctuation">:</span>
       <span class="token key atrule">addresses</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>192.168.2.20/24<span class="token punctuation">]</span>
